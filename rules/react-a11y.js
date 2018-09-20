@@ -44,7 +44,9 @@ module.exports = {
 
     // Prevent img alt text from containing redundant words like "image", "picture", or "photo"
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md
-    'jsx-a11y/img-redundant-alt': 'error',
+    // 'jsx-a11y/img-redundant-alt': 'error',
+    // img标签的alt属性中不能包含 "image", "picture", or "photo"这些词汇
+    'jsx-a11y/img-redundant-alt': 'off',
 
     // require that JSX labels use "htmlFor"
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
@@ -68,7 +70,9 @@ module.exports = {
 
     // require that mouseover/out come with focus/blur, for keyboard-only users
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/mouse-events-have-key-events.md
-    'jsx-a11y/mouse-events-have-key-events': 'error',
+    // 'jsx-a11y/mouse-events-have-key-events': 'error',
+    // 对mouseover/mouseout事件的监听必须伴有focus/blur的监听
+    'jsx-a11y/mouse-events-have-key-events': 'off',
 
     // Prevent use of `accessKey`
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-access-key.md
@@ -120,33 +124,39 @@ module.exports = {
 
     // require onClick be accompanied by onKeyUp/onKeyDown/onKeyPress
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/click-events-have-key-events.md
-    'jsx-a11y/click-events-have-key-events': 'error',
+    // 'jsx-a11y/click-events-have-key-events': 'error',
+    // onClick事件的监听必须伴随着onKeyUp/onKeyDown/onKeyPress的监听
+    'jsx-a11y/click-events-have-key-events': 'off',
 
     // Enforce that DOM elements without semantic behavior not have interaction handlers
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-static-element-interactions.md
-    'jsx-a11y/no-static-element-interactions': ['error', {
-      handlers: [
-        'onClick',
-        'onMouseDown',
-        'onMouseUp',
-        'onKeyPress',
-        'onKeyDown',
-        'onKeyUp',
-      ]
-    }],
+    // 'jsx-a11y/no-static-element-interactions': ['error', {
+    //   handlers: [
+    //     'onClick',
+    //     'onMouseDown',
+    //     'onMouseUp',
+    //     'onKeyPress',
+    //     'onKeyDown',
+    //     'onKeyUp',
+    //   ]
+    // }],
+    // 禁止无语义的元素（div/p）绑定onClick/onMouseDown/onMouseUp/onKeyPress/onKeyDown/onKeyUp事件
+    'jsx-a11y/no-static-element-interactions': 'off',
 
     // A non-interactive element does not support event handlers (mouse and key handlers)
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-element-interactions.md
-    'jsx-a11y/no-noninteractive-element-interactions': ['error', {
-      handlers: [
-        'onClick',
-        'onMouseDown',
-        'onMouseUp',
-        'onKeyPress',
-        'onKeyDown',
-        'onKeyUp',
-      ]
-    }],
+    // 'jsx-a11y/no-noninteractive-element-interactions': ['error', {
+    //   handlers: [
+    //     'onClick',
+    //     'onMouseDown',
+    //     'onMouseUp',
+    //     'onKeyPress',
+    //     'onKeyDown',
+    //     'onKeyUp',
+    //   ]
+    // }],
+    // 无交互元素（div/p）绑定onClick/onMouseDown/onMouseUp/onKeyPress/onKeyDown/onKeyUp事件
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
 
     // ensure emoji are accessible
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md
@@ -162,7 +172,9 @@ module.exports = {
 
     // prohibit autoFocus prop
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-autofocus.md
-    'jsx-a11y/no-autofocus': ['error', { ignoreNonDOM: true }],
+    // 'jsx-a11y/no-autofocus': ['error', { ignoreNonDOM: true }],
+    // 禁用autoFocus属性
+    'jsx-a11y/no-autofocus': 'off',
 
     // ensure HTML elements do not specify redundant ARIA roles
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-redundant-roles.md

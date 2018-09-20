@@ -30,7 +30,9 @@ module.exports = {
     'arrow-spacing': ['error', { before: true, after: true }],
 
     // verify super() callings in constructors
-    'constructor-super': 'error',
+    // 'constructor-super': 'error',
+    // constructor 中必须有 super
+    'constructor-super': 'off',
 
     // enforce the spacing around the * in generator functions
     // https://eslint.org/docs/rules/generator-star-spacing
@@ -106,10 +108,16 @@ module.exports = {
     }],
 
     // suggest using of const declaration for variables that are never modified after declared
-    'prefer-const': ['error', {
-      destructuring: 'any',
-      ignoreReadBeforeAssign: true,
-    }],
+    // 'prefer-const': ['error', {
+    //   destructuring: 'any',
+    //   ignoreReadBeforeAssign: true,
+    // }],
+    // 申明后不再被修改的变量必须使用 const 来申明
+    // any时，会提示b需要为const
+    // all时，不会提示
+    // let {a, b} = obj;
+    // a += 1;
+    "prefer-const": ["error", {"destructuring": "all"}],
 
     // Prefer destructuring from arrays and objects
     // https://eslint.org/docs/rules/prefer-destructuring
@@ -128,7 +136,9 @@ module.exports = {
 
     // disallow parseInt() in favor of binary, octal, and hexadecimal literals
     // https://eslint.org/docs/rules/prefer-numeric-literals
-    'prefer-numeric-literals': 'error',
+    // 'prefer-numeric-literals': 'error',
+    // 必须使用 0b11111011 而不是 parseInt('111110111', 2)
+    'prefer-numeric-literals': 'off',
 
     // suggest using Reflect methods where applicable
     // https://eslint.org/docs/rules/prefer-reflect
@@ -140,7 +150,9 @@ module.exports = {
 
     // suggest using the spread operator instead of .apply()
     // https://eslint.org/docs/rules/prefer-spread
-    'prefer-spread': 'error',
+    // 'prefer-spread': 'error',
+    // 必须使用 ...args 而不是 apply，比如 foo(...args)
+    'prefer-spread': 'off',
 
     // suggest using template literals instead of string concatenation
     // https://eslint.org/docs/rules/prefer-template
@@ -148,7 +160,9 @@ module.exports = {
 
     // disallow generator functions that do not have yield
     // https://eslint.org/docs/rules/require-yield
-    'require-yield': 'error',
+    // 'require-yield': 'error',
+    // generator 函数内必须有 yield
+    'require-yield': 'off',
 
     // enforce spacing between object rest-spread
     // https://eslint.org/docs/rules/rest-spread-spacing

@@ -180,20 +180,25 @@ module.exports = {
     // disallow reassignment of function parameters
     // disallow parameter object manipulation except for specific exclusions
     // rule: https://eslint.org/docs/rules/no-param-reassign.html
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'acc', // for reduce accumulators
-        'accumulator', // for reduce accumulators
-        'e', // for e.returnvalue
-        'ctx', // for Koa routing
-        'req', // for Express requests
-        'request', // for Express requests
-        'res', // for Express responses
-        'response', // for Express responses
-        '$scope', // for Angular 1 scopes
-      ]
-    }],
+    // 'no-param-reassign': ['error', {
+    //   props: true,
+    //   ignorePropertyModificationsFor: [
+    //     'acc', // for reduce accumulators
+    //     'accumulator', // for reduce accumulators
+    //     'e', // for e.returnvalue
+    //     'ctx', // for Koa routing
+    //     'req', // for Express requests
+    //     'request', // for Express requests
+    //     'res', // for Express responses
+    //     'response', // for Express responses
+    //     '$scope', // for Angular 1 scopes
+    //   ]
+    // }],
+    // 禁止对函数的参数重新赋值
+    // function foo(bar) {
+    //   bar = 13;
+    // }
+    'no-param-reassign': 'off',
 
     // disallow usage of __proto__ property
     'no-proto': 'error',
@@ -266,18 +271,26 @@ module.exports = {
     'no-sequences': 'error',
 
     // restrict what can be thrown as an exception
-    'no-throw-literal': 'error',
+    // 'no-throw-literal': 'error',
+    // 禁止 throw 字面量，必须 throw 一个 Error 对象
+    // throw '111';  // no
+    // throw new Error("111")
+    'no-throw-literal': 'off',
 
     // disallow unmodified conditions of loops
     // https://eslint.org/docs/rules/no-unmodified-loop-condition
     'no-unmodified-loop-condition': 'off',
 
     // disallow usage of expressions in statement position
-    'no-unused-expressions': ['error', {
-      allowShortCircuit: false,
-      allowTernary: false,
-      allowTaggedTemplates: false,
-    }],
+    // 'no-unused-expressions': ['error', {
+    //   allowShortCircuit: false,
+    //   allowTernary: false,
+    //   allowTaggedTemplates: false,
+    // }],
+    // 禁止无用的表达式
+    // const aaaa = true;
+    // aaaa && dd();
+    'no-unused-expressions': 'off',
 
     // disallow unused labels
     // https://eslint.org/docs/rules/no-unused-labels
@@ -310,10 +323,14 @@ module.exports = {
 
     // require using Error objects as Promise rejection reasons
     // https://eslint.org/docs/rules/prefer-promise-reject-errors
-    'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
+    // 'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
+    // Promise 的 reject 中必须传入 Error 对象，而不是字面量
+    'prefer-promise-reject-errors': 'off',
 
     // require use of the second argument for parseInt()
-    radix: 'error',
+    // radix: 'error',
+    // parseInt 必须传入第二个参数
+    radix: 'off',
 
     // require `await` in `async function` (note: this is a horrible rule that should never be used)
     // https://eslint.org/docs/rules/require-await

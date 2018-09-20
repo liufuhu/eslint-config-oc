@@ -16,26 +16,28 @@ module.exports = {
     // https://eslint.org/docs/rules/jsx-quotes
     'jsx-quotes': ['error', 'prefer-double'],
 
-    'class-methods-use-this': ['error', {
-      exceptMethods: [
-        'render',
-        'getInitialState',
-        'getDefaultProps',
-        'getChildContext',
-        'componentWillMount',
-        'UNSAFE_componentWillMount',
-        'componentDidMount',
-        'componentWillReceiveProps',
-        'UNSAFE_componentWillReceiveProps',
-        'shouldComponentUpdate',
-        'componentWillUpdate',
-        'UNSAFE_componentWillUpdate',
-        'componentDidUpdate',
-        'componentWillUnmount',
-        'componentDidCatch',
-        'getSnapshotBeforeUpdate'
-      ],
-    }],
+    // 'class-methods-use-this': ['error', {
+    //   exceptMethods: [
+    //     'render',
+    //     'getInitialState',
+    //     'getDefaultProps',
+    //     'getChildContext',
+    //     'componentWillMount',
+    //     'UNSAFE_componentWillMount',
+    //     'componentDidMount',
+    //     'componentWillReceiveProps',
+    //     'UNSAFE_componentWillReceiveProps',
+    //     'shouldComponentUpdate',
+    //     'componentWillUpdate',
+    //     'UNSAFE_componentWillUpdate',
+    //     'componentDidUpdate',
+    //     'componentWillUnmount',
+    //     'componentDidCatch',
+    //     'getSnapshotBeforeUpdate'
+    //   ],
+    // }],
+    // 在类的非静态方法中，必须存在对 this 的引用，要求太严格，应该去掉
+    'class-methods-use-this': 'off',
 
     // Prevent missing displayName in a React component definition
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
@@ -415,7 +417,9 @@ module.exports = {
 
     // One JSX Element Per Line
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-one-expression-per-line.md
-    'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+    // 'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+    // jsx中一行中只能由一个表达式
+    'react/jsx-one-expression-per-line': 'off',
 
     // Enforce consistent usage of destructuring assignment of props, state, and context
     // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/destructuring-assignment.md

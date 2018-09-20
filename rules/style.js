@@ -91,7 +91,9 @@ module.exports = {
 
     // require function expressions to have a name
     // https://eslint.org/docs/rules/func-names
-    'func-names': 'warn',
+    // 'func-names': 'warn',
+    // 函数必须有名字
+    'func-names': 'off',
 
     // enforces use of function declarations or expressions
     // https://eslint.org/docs/rules/func-style
@@ -100,7 +102,9 @@ module.exports = {
 
     // enforce consistent line breaks inside function parentheses
     // https://eslint.org/docs/rules/function-paren-newline
-    'function-paren-newline': ['error', 'consistent'],
+    // 'function-paren-newline': ['error', 'consistent'],
+    // 函数参数的换行要统一
+    'function-paren-newline': 'off',
 
     // Blacklist certain identifiers to prevent them being used
     // https://eslint.org/docs/rules/id-blacklist
@@ -115,7 +119,9 @@ module.exports = {
 
     // Enforce the location of arrow function bodies with implicit returns
     // https://eslint.org/docs/rules/implicit-arrow-linebreak
-    'implicit-arrow-linebreak': ['error', 'beside'],
+    // 'implicit-arrow-linebreak': ['error', 'beside'],
+    // 控制箭头函数body的位置
+    'implicit-arrow-linebreak': 'off',
 
     // this option sets a specific tab width for your code
     // https://eslint.org/docs/rules/indent
@@ -173,7 +179,9 @@ module.exports = {
 
     // disallow mixed 'LF' and 'CRLF' as linebreaks
     // https://eslint.org/docs/rules/linebreak-style
-    'linebreak-style': ['error', 'unix'],
+    // 'linebreak-style': ['error', 'unix'],
+    // 限制换行符为 LF 或 CRLF
+    'linebreak-style': 'off',
 
     // require or disallow an empty line between class members
     // https://eslint.org/docs/rules/lines-between-class-members
@@ -273,7 +281,9 @@ module.exports = {
 
     // disallow use of the continue statement
     // https://eslint.org/docs/rules/no-continue
-    'no-continue': 'error',
+    // 'no-continue': 'error',
+    // 禁止使用 continue
+    'no-continue': 'off',
 
     // disallow comments inline after code
     'no-inline-comments': 'off',
@@ -320,14 +330,18 @@ module.exports = {
     'no-negated-condition': 'off',
 
     // disallow nested ternary expressions
-    'no-nested-ternary': 'error',
+    // 'no-nested-ternary': 'error',
+    // 禁止使用嵌套的三元表达式，比如: a ? b : c ? d : e
+    'no-nested-ternary': 'off',
 
     // disallow use of the Object constructor
     'no-new-object': 'error',
 
     // disallow use of unary operators, ++ and --
     // https://eslint.org/docs/rules/no-plusplus
-    'no-plusplus': 'error',
+    // 'no-plusplus': 'error',
+    // 禁止使用 ++ 或 --
+    'no-plusplus': 'off',
 
     // disallow certain syntax forms
     // https://eslint.org/docs/rules/no-restricted-syntax
@@ -415,11 +429,15 @@ module.exports = {
 
     // require assignment operator shorthand where possible or prohibit it entirely
     // https://eslint.org/docs/rules/operator-assignment
-    'operator-assignment': ['error', 'always'],
+    // 'operator-assignment': ['error', 'always'],
+    // 必须使用 x += y 而不是 x = x + y
+    'operator-assignment': 'off',
 
     // Requires operator at the beginning of the line in multiline statements
     // https://eslint.org/docs/rules/operator-linebreak
-    'operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
+    // 'operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
+    // 需要换行的时候，操作符必须放在行末
+    'operator-linebreak': ["error", "after", { "overrides": { "?": "after", ":": "after" } }],
 
     // disallow padding within blocks
     'padded-blocks': ['error', { blocks: 'never', classes: 'never', switches: 'never' }],
@@ -470,6 +488,8 @@ module.exports = {
       named: 'never',
       asyncArrow: 'always'
     }],
+    // function 的小括号之前必须要有空格
+    'space-before-function-paren': ["error", "never"],
 
     // require or disallow spaces inside parentheses
     'space-in-parens': ['error', 'never'],
