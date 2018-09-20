@@ -1,11 +1,11 @@
-# eslint-config-oc
+# eslint-config-open
 
 Node Style Guide for Javascript.
 
 ## Install
 
 ```bash
-npm i eslint eslint-config-oc --save-dev
+npm i eslint eslint-config-open --save-dev
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm i eslint eslint-config-oc --save-dev
 ```json
 {
   "devDependencies": {
-    "eslint-config-oc": "1",
+    "eslint-config-open": "1",
     "eslint": "4"
   }
 }
@@ -25,20 +25,20 @@ npm i eslint eslint-config-oc --save-dev
 
 ```js
 module.exports = {
-  extends: 'eslint-config-oc',
+  extends: 'eslint-config-open',
 };
 ```
 
 ### Use with Experimental Features
 
-If you want to use eslint-config-oc with experimental features such as `async function`, you should use `babel-eslint` parser:
+If you want to use eslint-config-open with experimental features such as `async function`, you should use `babel-eslint` parser:
 
 - `package.json`
 
 ```json
 {
   "devDependencies": {
-    "eslint-config-oc": "1",
+    "eslint-config-open": "1",
     "eslint": "4",
     "babel-eslint": "8"
   }
@@ -49,7 +49,7 @@ If you want to use eslint-config-oc with experimental features such as `async fu
 
 ```js
 module.exports = {
-  extends: 'eslint-config-oc',
+  extends: 'eslint-config-open',
   // for experimental features support
   parser: 'babel-eslint',
   rules: {
@@ -62,14 +62,14 @@ module.exports = {
 
 ### Use with React in Front-End
 
-If you want to use eslint-config-oc with react, jsx and es6 modules:
+If you want to use eslint-config-open with react, jsx and es6 modules:
 
 - `package.json`
 
 ```json
 {
   "devDependencies": {
-    "eslint-config-oc": "1",
+    "eslint-config-open": "1",
     "eslint": "4",
     "babel-eslint": "8",
     "eslint-plugin-react": "7"
@@ -81,7 +81,7 @@ If you want to use eslint-config-oc with react, jsx and es6 modules:
 
 ```js
 module.exports = {
-  extends: 'eslint-config-oc',
+  extends: 'eslint-config-open',
   // for experimental features support
   parser: 'babel-eslint',
   parserOptions: {
