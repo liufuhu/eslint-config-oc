@@ -1,0 +1,32 @@
+{
+  "name": "@alipay/eslint-config-oc",
+  "version": "1.0.1",
+  "description": "Style Guide for Javascript.",
+  "main": "index",
+  "files": [
+    "index.js",
+    "react.js",
+    "rules"
+  ],
+  "dependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint-plugin-eggache": "^1.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liufuhu/eslint-config-oc"
+  },
+  "author": "liufuhu <liufuhu@gmail.com>",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  }
+}
