@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-open",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Style Guide for Javascript.",
   "main": "index",
   "files": [
@@ -13,10 +13,11 @@
     "eslint-plugin-eggache": "^1.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-restricted-globals": "^0.2.0"
   },
   "devDependencies": {
-    "eslint": "^5.4.0"
+    "eslint": "^4.19.1"
   },
   "repository": {
     "type": "git",

@@ -25,7 +25,9 @@ module.exports = {
     'no-cond-assign': ['error', 'always'],
 
     // disallow use of console
-    'no-console': 'warn',
+    // 'no-console': 'warn',
+    // 禁止使用 console
+    'no-console': 'off',
 
     // disallow use of constant expressions in conditions
     'no-constant-condition': 'warn',
